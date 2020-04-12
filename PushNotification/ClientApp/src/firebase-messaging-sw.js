@@ -12,6 +12,22 @@ firebase.initializeApp({
 });
 const messaging = firebase.messaging();
 
+
+// in back ground the message json structure must chnage otherwise this handler never be triggered
+
+/*use ALWAYS this structure
+{
+  "to": "abc",
+
+    "data": {
+    "notification": {
+      "title": "Hello",
+        "body": "world"
+    }
+  }
+} /*
+
+*/
 messaging.setBackgroundMessageHandler(function (payload) {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
   // Customize notification here

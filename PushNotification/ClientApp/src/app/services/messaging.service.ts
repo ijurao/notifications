@@ -21,7 +21,7 @@ export class MessagingService {
    private db: AngularFireDatabase) {
         this.apiUrl = baseUrl + "pushnotifications";
     
-      this.mess = firebase.messaging()
+     // this.mess = firebase.messaging()
 
     }
 
