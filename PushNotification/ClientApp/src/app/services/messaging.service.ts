@@ -21,7 +21,8 @@ export class MessagingService {
    private db: AngularFireDatabase) {
         this.apiUrl = baseUrl + "pushnotifications";
     
-        
+      this.mess = firebase.messaging()
+
     }
 
     getPermission() {
@@ -73,7 +74,7 @@ export class MessagingService {
     receiveMessage() {
         this.mess.onMessage((payload) => {
 
-            console.log("received" + payload)
+            console.log("receivedsss" + payload)
         });
 
 
